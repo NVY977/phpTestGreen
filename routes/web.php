@@ -13,9 +13,5 @@ use App\Http\Controllers\PersonController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('add', [PersonController::class, 'home']);
+Route::get('/', [PersonController::class, 'home']);
 Route::post('save', [PersonController::class, 'save'])->name('person.save');
