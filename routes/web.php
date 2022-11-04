@@ -13,5 +13,5 @@ use App\Http\Controllers\PersonController;
 |
 */
 
-Route::get('/', [PersonController::class, 'home']);
+Route::get('/', [PersonController::class, 'login']);
 Route::post('save', [PersonController::class, 'save'])->name('person.save');

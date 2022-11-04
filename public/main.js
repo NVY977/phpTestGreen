@@ -14,16 +14,16 @@ $(function(){
                 $(document).find('span.error-text').text('');
             },
             success:function(data){
-                if(data.code == '400'){
+                if(data.code == '422'){
                     $.each(data.error, function(prefix, val){
                         $('span.'+prefix+'_error').text(val[0]);
                     });
-                    let error = '<span class="alert alert-danger">'+data.mes+'</span>';
+                    let error = '<span class="alert alert-danger">'+data.msg+'</span>';
                     $("#res").html(error);
                 }else if(data.code == '200'){
-                    let success = '<span class="alert alert-success">'+data.mes+'</span>';
-                    $("#res").html(success);
                     $('#login_form')[0].reset();
+                    let success = '<span class="alert alert-success">'+data.msg+'</span>';
+                    $("#res").html(success);
                 }
             }
         });
