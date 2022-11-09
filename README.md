@@ -15,8 +15,8 @@
     - surname
     - email
     - password
-    - confirmed password
-. Реализовать отправку этой формы при помощи AJAX.
+    - confirmation password
+Реализовать отправку этой формы при помощи AJAX.
 Реализовать обработку AJAX запроса на php.
 
 В обработчике нужно:
